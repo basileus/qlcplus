@@ -40,7 +40,6 @@
 #include "vccuelist.h"
 #include "qlcmacros.h"
 #include "function.h"
-#include "inputmap.h"
 #include "qlcfile.h"
 #include "apputil.h"
 #include "chaser.h"
@@ -710,7 +709,7 @@ void VCCueList::slotSlider2ValueChanged(int value)
  * DMX Source
  *****************************************************************************/
 
-void VCCueList::writeDMX(MasterTimer* timer, UniverseArray* universes)
+void VCCueList::writeDMX(MasterTimer* timer, QList<Universe*> universes)
 {
     m_mutex.lock();
     if (m_runner != NULL)
@@ -891,7 +890,7 @@ void VCCueList::slotModeChanged(Doc::Mode mode)
     if (mode == Doc::Operate)
     {
         Q_ASSERT(m_runner == NULL);
-        m_doc->masterTimer()->registerDMXSource(this);
+        m_doc->masterTimer()->registerDMXSource(this, "CueList");
         enable = true;
         // send the initial feedback for the current step slider
         updateFeedback();

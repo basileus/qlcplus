@@ -245,7 +245,7 @@ QList <VCXYPadFixture> VCXYPad::fixtures() const
  * Current XY position
  *****************************************************************************/
 
-void VCXYPad::writeDMX(MasterTimer* timer, UniverseArray* universes)
+void VCXYPad::writeDMX(MasterTimer* timer, QList<Universe *> universes)
 {
     Q_UNUSED(timer);
 
@@ -421,7 +421,7 @@ void VCXYPad::slotModeChanged(Doc::Mode mode)
 
     if (mode == Doc::Operate)
     {
-        m_doc->masterTimer()->registerDMXSource(this);
+        m_doc->masterTimer()->registerDMXSource(this, "XYPad");
         m_vSlider->setEnabled(true);
         m_hSlider->setEnabled(true);
     }

@@ -10,15 +10,19 @@
  <Type>Moving Head</Type>
  <Channel Name="Pan Coarse">
   <Group Byte="0">Pan</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Pan Fine">
   <Group Byte="1">Pan</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Tilt Coarse">
   <Group Byte="0">Tilt</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Tilt Fine">
   <Group Byte="1">Tilt</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Speed Move">
   <Group Byte="0">Speed</Group>
@@ -48,6 +52,8 @@
  </Channel>
  <Channel Name="Dimmer">
   <Group Byte="0">Intensity</Group>
+  <Capability Min="0" Max="7">Blackout</Capability>
+  <Capability Min="8" Max="255">Proportional Dimmer</Capability>
  </Channel>
  <Channel Name="Shutter">
   <Group Byte="0">Shutter</Group>
@@ -104,20 +110,27 @@
  <Channel Name="Cyan">
   <Group Byte="0">Intensity</Group>
   <Colour>Cyan</Colour>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Magenta">
   <Group Byte="0">Intensity</Group>
   <Colour>Magenta</Colour>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Yellow">
   <Group Byte="0">Intensity</Group>
   <Colour>Yellow</Colour>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="CTO">
   <Group Byte="0">Colour</Group>
+  <Capability Min="0" Max="7">No function</Capability>
+  <Capability Min="8" Max="255">Linear CTO</Capability>
  </Channel>
  <Channel Name="Speed CMY">
   <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="7">No function</Capability>
+  <Capability Min="8" Max="255">Variable speed </Capability>
  </Channel>
  <Channel Name="Macro CMY">
   <Group Byte="0">Colour</Group>
@@ -306,12 +319,15 @@
  </Channel>
  <Channel Name="Focus">
   <Group Byte="0">Beam</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Focus Fine">
   <Group Byte="0">Beam</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Zoom">
   <Group Byte="0">Beam</Group>
+  <Capability Min="0" Max="255"></Capability>
  </Channel>
  <Channel Name="Reset/Lamp">
   <Group Byte="0">Maintenance</Group>
@@ -325,7 +341,7 @@
  </Channel>
  <Mode Name="33ch">
   <Physical>
-   <Bulb Lumens="16000" Type="MSD 275W" ColourTemperature="8000"/>
+   <Bulb Lumens="16000" Type="MSD 16R 330W" ColourTemperature="8000"/>
    <Dimensions Width="355" Height="600" Weight="20" Depth="395"/>
    <Lens DegreesMax="40" Name="Other" DegreesMin="2"/>
    <Focus PanMax="540" Type="Head" TiltMax="270"/>

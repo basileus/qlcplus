@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE FixtureDefinition>
-<FixtureDefinition xmlns="http://qlcplus.sourceforge.net/FixtureDefinition">
+<FixtureDefinition>
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.7.0</Version>
@@ -384,7 +383,7 @@
  </Mode>
  <Mode Name="24ch">
   <Physical>
-   <Bulb Lumens="16000" Type="MSD 275W" ColourTemperature="8000"/>
+   <Bulb Lumens="16000" Type="MSD 16R 330W" ColourTemperature="8000"/>
    <Dimensions Width="355" Height="600" Weight="20" Depth="395"/>
    <Lens DegreesMax="40" Name="Other" DegreesMin="2"/>
    <Focus PanMax="540" Type="Head" TiltMax="270"/>
